@@ -21,5 +21,5 @@ if ( appWidth!=0 && appHeight!=0 )println("Display: Good to Go"); //AND
 String ls="landscapes or Square", p="potrait", DO="Display Orientation", instruct ="Breh, turn your phon";
 String orientation = ( appWidth >= appHeight ) ? ls : p ;
 println(DO, orientation);
-if (orientation == p ) println(instruct);
+if (orientation == p ) println(instruct); //Later, output to CANVAS
 //
