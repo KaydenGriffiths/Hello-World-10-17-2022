@@ -1,8 +1,10 @@
 //Global Variables
-int appWidth=1, appHeight=1;
+int appWidth, appHeight;
 //
 //Declaring Display Geometry: landscape, square, potrait
 size(700,1000); //Able to deploy with efullscreen();
+appWidth = width;
+appHeight = height;
 //
 //Concatenation , -or- +
 println("\t\t\tWidth="+width, "\tHeight="+height);
