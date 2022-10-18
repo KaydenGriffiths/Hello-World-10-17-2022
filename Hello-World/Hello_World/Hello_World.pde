@@ -6,8 +6,8 @@
 size(700,400); //Able to deploy with efullscreen();
 //
 //Concatenation , -or- +
-println("Width =", width, "\t\tHeight =", height);
-println("Display Monitor:", "width:"+displayWidth, "height:"+displayHeight);
+println("\t\t\tWidth="+width, "\tHeight="+height);
+println("Display Monitor:", "\twidth:"+displayWidth, "height:"+displayHeight);
 //
 //Outputting instructions to user when errors with above
 //Bru, turn your phum
