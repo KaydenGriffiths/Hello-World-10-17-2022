@@ -18,7 +18,8 @@ if ( appHeight > displayHeight ) appWidth=0; //CANVAS-width will not fit
 if ( appWidth==0 || appHeight==0 )println("STOP, is borken"); //OR
 if ( appWidth!=0 && appHeight!=0 )println("Display: Good to Go"); //AND
 //
-String ls="landscapes or Square", p="potrait", DO="Display Orientation", instruct ="Bru, turn your phun";
-String orientation = () ? ls : p ;
+String ls="landscapes or Square", p="potrait", DO="Display Orientation", instruct ="Breh, turn your phon";
+String orientation = ( appWidth >= appHeight ) ? ls : p ;
 println(DO, orientation);
+if (orientation == p ) println(instruct);
 //
