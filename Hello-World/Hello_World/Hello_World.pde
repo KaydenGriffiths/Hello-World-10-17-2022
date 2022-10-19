@@ -28,7 +28,11 @@ void setup() {
 } //End setup
 //
 
-void draw() {} //End draw
+void draw() {
+  ellipse(50, 100, 10, 120);
+  line(50, 100, 10, 120);
+  rect(100, 150, 10, 120);
+} //End draw
 //
 void keyPressed() {} //End keyPressed
 //
