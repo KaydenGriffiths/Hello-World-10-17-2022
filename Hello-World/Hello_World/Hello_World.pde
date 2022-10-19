@@ -3,7 +3,7 @@ int appWidth, appHeight;
 //
 void setup() {
   //Declaring Display Geometry: landscape, square, potrait
-  size(700, 400); //Able to deploy with efullscreen();      
+  size(400, 700); //Able to deploy with efullscreen();      
   appWidth = width;
   appHeight = height;
   //
