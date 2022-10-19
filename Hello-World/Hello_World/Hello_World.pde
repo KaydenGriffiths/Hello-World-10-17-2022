@@ -11,19 +11,20 @@ void setup() {
   println("\t\t\tWidth="+width, "\tHeight="+height);
   println("Display Monitor:", "\twidth:"+displayWidth, "height:"+displayHeight);
   //
-  //fitting CANVAS into Monitor Display
-  if ( appWidth > displayWidth ) appWidth=0; //CANVAS-width will not fit 
-  if ( appHeight > displayHeight ) appWidth=0; //CANVAS-width will not fit 
-  //
-  //Outputting intructions to user when errors with above
-  if ( appWidth==0 || appHeight==0 )println("STOP, is borken"); //OR
-  if ( appWidth!=0 && appHeight!=0 )println("Display: Good to Go"); //AND
-  //
   String ls="landscapes or Square", p="potrait", DO="Display Orientation", instruct ="Breh, turn your phon";
-  String orientation = ( appWidth >= appHeight ) ? ls : p ;
-  println(DO, orientation);
-  if (orientation == p ) println(instruct); //Later, output to CANVAS
   //
+  if ( appWidth >= appHeight ) { //Declaring Landscape & Square 
+    println(instruct);
+  } else {
+    println("Display: Good to Go");
+    if ( appWidth > displayWidth ) { //Fitting CANVAS into Monitor display} else {
+    appWidth=0;
+    appHeight=0;
+    println("STOP, is broken");
+    } else {
+      //Empty ELSE
+    }
+  } 
 } //End setup
 //
 
@@ -31,6 +32,6 @@ void draw() {} //End draw
 //
 void keyPressed() {} //End keyPressed
 //
-void mousePressed() {} //End mousPressed
+void mousePressed() {} //End mousePressed
 //
 //End Main Program
