@@ -29,7 +29,7 @@ void setup() {
 //
 
 void draw() {
-  ellipse(50, 100, 10, 120);
+  ellipse(200, 350, 200, 200);
   line(50, 100, 10, 120);
   rect(100, 150, 10, 120);
 } //End draw
