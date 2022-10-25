@@ -32,7 +32,7 @@ void setup() {
   xStart = centerX - (width * 1/4); 
   yStart = centerY - (height * 1/4);
   widthRect = width * 1/2;
-  heightRect = height * 1/2 ;
+  heightRect = height * 1/2;
 } //End setup
 //
 
