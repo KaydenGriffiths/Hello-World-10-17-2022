@@ -1,9 +1,10 @@
 //Global Variables
 int appWidth, appHeight;
+float centerX, centerY, xStart, yStart, widthRect, heightRect;
 //
 void setup() {
   //Declaring Display Geometry: landscape, square, potrait
-  size(400, 700); //Able to deploy with efullscreen();      
+  size(700, 400); //Able to deploy with efullscreen();      
   appWidth = width;
   appHeight = height;
   //
@@ -25,13 +26,18 @@ void setup() {
       //Empty ELSE
     }
   } 
+  //Population
+  centerX = width * 1/2;
+  centerY = height *1/2;
+  xStart = centerX - (width * 1/4); 
+  yStart = centerY - (height * 1/4);
+  widthRect = width * 1/2;
+  heightRect = height * 1/2 ;
 } //End setup
 //
 
 void draw() {
-  ellipse(200, 350, 200, 200);
-  line(50, 100, 10, 120);
-  rect(100, 150, 10, 120);
+  rect(xStart, yStart, widthRect, heightRect);
 } //End draw
 //
 void keyPressed() {} //End keyPressed
