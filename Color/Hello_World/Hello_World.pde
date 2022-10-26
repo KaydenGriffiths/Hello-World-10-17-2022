@@ -48,8 +48,8 @@ void draw() {
   //
   background( color( random(0 , 255), random(0 , 130), random(0 , 0) ) ); // Color without blue
   //
-  background( blackNightMode );
-  strokeWeight( thick  );
+  //background( blackNightMode );
+  strokeWeight( thick );
   rect(xStart, yStart, widthRect, heightRect);
 } //End draw
 //
