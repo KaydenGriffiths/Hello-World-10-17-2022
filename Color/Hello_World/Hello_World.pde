@@ -6,7 +6,10 @@ float thin, normal, thick;
 //
 void setup() {
   //Declaring Display Geometry: landscape, square, potrait
-  size(700, 400); //Able to deploy with efullscreen();      
+  size(700, 400); //Able to deploy with efullscreen();   
+  //Adjusting Frame rates..
+  frameRate(60);
+  //
   appWidth = width;
   appHeight = height;
   //
@@ -42,10 +45,11 @@ void setup() {
 //
 
 void draw() {
+  // Printing Frame rate (hopefully)
+  println(frameRate);
   // New Background Function "Covers" old gray scale background()
   // Night mode means backgroubd cannot have blue // change randome for night mode, hard core "0"
   background(100); //Gray Scale (0-255) & Blue Issue for night mode
-  //
   //background( color( random(0 , 255), random(0 , 255), random(0 , 255) ) ); // Strobe light fever!
   //
   //background( blackNightMode );
