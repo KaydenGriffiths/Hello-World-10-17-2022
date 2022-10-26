@@ -51,6 +51,7 @@ void draw() {
   //background( blackNightMode );
   strokeWeight( thick );
   rect(xStart, yStart, widthRect, heightRect);
+  strokeWeight(1); //default reset
 } //End draw
 //
 void keyPressed() {} //End keyPressed
