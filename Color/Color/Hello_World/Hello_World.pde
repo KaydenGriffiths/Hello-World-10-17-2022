@@ -37,9 +37,9 @@ void setup() {
 //
 
 void draw() {
-  // New Background 
+  // New Background Function "Covers" old gray scale background()
   // Night mode means backgroubd cannot have blue // change randome for night mode, hard core "0"
-  background(0); //Gray Scale & Blue Issue for night mode
+  background(200); //Gray Scale (0-255) & Blue Issue for night mode
   rect(xStart, yStart, widthRect, heightRect);
 } //End draw
 //
