@@ -1,12 +1,12 @@
 //Global Variables
 int appWidth, appHeight; //Int= interger val.
 float centerX, centerY, xStart, yStart, widthRect, heightRect; //float = Decimal Val.
-color blackNightMode=#000000; //hexidecimal
+color blackNightMode=#000000, purple=#6419E1, yellow=#F9FA03, white=#FFFFFF; //hexidecimal
 float thin, normal, thick;
 //
 void setup() {
   //Declaring Display Geometry: landscape, square, potrait
-  size(400, 700); //Able to deploy with efullscreen();      
+  size(700, 400); //Able to deploy with efullscreen();      
   appWidth = width;
   appHeight = height;
   //
@@ -46,11 +46,15 @@ void draw() {
   // Night mode means backgroubd cannot have blue // change randome for night mode, hard core "0"
   background(100); //Gray Scale (0-255) & Blue Issue for night mode
   //
-  background( color( random(0 , 255), random(0 , 130), random(0 , 0) ) ); // Color without blue
+  //background( color( random(0 , 255), random(0 , 255), random(0 , 255) ) ); // Strobe light fever!
   //
   //background( blackNightMode );
   strokeWeight( thick );
+  stroke( purple );
+  fill( yellow );
   rect(xStart, yStart, widthRect, heightRect);
+  fill( white ); //default reset
+  stroke( blackNightMode ); //default reset
   strokeWeight(1); //default reset
 } //End draw
 //
