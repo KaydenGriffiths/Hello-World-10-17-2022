@@ -1,14 +1,16 @@
 //Global Variables
-int appWidth, appHeight; //Int= interger val.
+int appWidth, appHeight; //Int= Interger val.
 float centerX, centerY, xStart, yStart, widthRect, heightRect; //float = Decimal Val.
 color blackNightMode=#000000, purple=#6419E1, yellow=#F9FA03, white=#FFFFFF; //hexidecimal
+color purpleNightMode=#FA0096, yellowNightMode=#F8FC00;
 float thin, normal, thick;
+Boolean nightMode=false, randomBackground=false;
 //
 void setup() {
   //Declaring Display Geometry: landscape, square, potrait
   size(700, 400); //Able to deploy with efullscreen();   
   //Adjusting Frame rates..
-  frameRate(60);
+  frameRate(4);
   //
   appWidth = width;
   appHeight = height;
@@ -46,16 +48,16 @@ void setup() {
 
 void draw() {
   // Printing Frame rate (hopefully)
-  println(frameRate);
+  //println(frameRate); //show frame rate 60 times a second..
   // New Background Function "Covers" old gray scale background()
   // Night mode means backgroubd cannot have blue // change randome for night mode, hard core "0"
-  background(100); //Gray Scale (0-255) & Blue Issue for night mode
-  //background( color( random(0 , 255), random(0 , 255), random(0 , 255) ) ); // Strobe light fever!
+  //background(100); //Gray Scale (0-255) & Blue Issue for night mode
+  background( color( random(0 , 255), random(0 , 255), random(0 , 255) ) ); // Strobe light fever!
   //
   //background( blackNightMode );
   strokeWeight( thick );
-  stroke( purple );
-  fill( yellow );
+  stroke( purple ); //purpleNightMode
+  fill( yellow ); //yellowNightMode
   rect(xStart, yStart, widthRect, heightRect);
   fill( white ); //default reset
   stroke( blackNightMode ); //default reset
