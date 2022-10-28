@@ -1,16 +1,16 @@
 //Global Variables
 int appWidth, appHeight; //Int= Interger val.
 float centerX, centerY, xStart, yStart, widthRect, heightRect; //float = Decimal Val.
-color blackNightMode=#000000, purple=#6419E1, yellow=#F9FA03, white=#FFFFFF; //hexidecimal
-color purpleNightMode=#FA0096, yellowNightMode=#F8FC00;
+color blackNightMode=#000000, purple=#6419E1, yellow=#F9FA03, white=#FFFFFF; 
+color purpleNightMode=#FA0096, yellowNightMode=#F8FC00; //hexidecimal
 float thin, normal, thick;
-Boolean nightMode=false, randomBackground=false;
+Boolean grayScale=false, backgroundColor=false, nightMode=false, randomBackground=false;;
 //
 void setup() {
   //Declaring Display Geometry: landscape, square, potrait
   size(400, 700); //Able to deploy with efullscreen();   
   //Adjusting Frame rates..
-  frameRate(4);
+  frameRate(15);
   //
   appWidth = width;
   appHeight = height;
@@ -47,25 +47,40 @@ void setup() {
 //
 
 void draw() {
-  // Printing Frame rate (hopefully)
+  // Printing Frame rate 
   //println(frameRate); //show frame rate 60 times a second..
   // New Background Function "Covers" old gray scale background()
   // Night mode means backgroubd cannot have blue // change randome for night mode, hard core "0"
-  //background(100); //Gray Scale (0-255) & Blue Issue for night mode
-  background( color( random(0 , 255), random(0 , 255), random(0 , 255) ) ); // Strobe light fever!
+  if ( grayScale == true ) background(100); //Gray Scale (0-255) & Blue Issue for night mode
+  // 
+  if ( backgroundColor == true) background( color( random(0 , 255), random(0 , 255), random(0 , 255) ) ); // Strobe light fever!
   //
-  //background( blackNightMode );
   strokeWeight( thick );
-  stroke( purple ); //purpleNightMode
-  fill( yellow ); //yellowNightMode
+  if ( nightMode == true)
+  {
+    background( blackNightMode );
+    stroke( yellowNightMode );
+    fill( purpleNightMode );
+  } else {
+    stroke( purple ); 
+    fill( yellow ); 
+  } 
+  //background( blackNightMode );
+  
   rect(xStart, yStart, widthRect, heightRect);
   fill( white ); //default reset
   stroke( blackNightMode ); //default reset
   strokeWeight(1); //default reset
 } //End draw
 //
-void keyPressed() {} //End keyPressed
+void keyPressed() {
+  grayScale = false;
+  backgroundColor = false;
+  if ( key == 'g' || key == 'G') grayScale = true;
+  if ( key == 'b' || key == 'B' ) backgroundColor = true;
+} //End keyPressed
 //
-void mousePressed() {} //End mousePressed
+void mousePressed() {
+} //End mousePressed
 //
 //End Main Program
