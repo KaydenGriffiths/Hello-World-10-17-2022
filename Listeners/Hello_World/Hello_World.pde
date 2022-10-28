@@ -8,7 +8,7 @@ Boolean nightMode=false, randomBackground=false;
 //
 void setup() {
   //Declaring Display Geometry: landscape, square, potrait
-  size(700, 400); //Able to deploy with efullscreen();   
+  size(400, 700); //Able to deploy with efullscreen();   
   //Adjusting Frame rates..
   frameRate(4);
   //
