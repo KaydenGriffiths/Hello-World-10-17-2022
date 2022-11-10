@@ -39,7 +39,12 @@ void draw() {
   strokeWeight(thick);
   stroke( black );
   fill( red );
-  rect( width * 1/4, height * 3/8, 350, 350, 175.5 );
+  rect( width * 1/4, height * 3/8, 350, 350);
+  //
+  strokeWeight(thick);
+  stroke( black); 
+  fill( red );
+  triangle( width * 1/4, height * 3/8, 350, 350, 350, 175);
 } //End draw
 //
 void keyPressed() {} //End keyPressed
