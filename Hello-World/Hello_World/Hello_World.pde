@@ -1,31 +1,37 @@
 //Global Variables
-int appWidth, appHeight;
+int appWidth, appHeight, largerDimension, smallerDimension;
 float centerX, centerY, xStart, yStart, widthRect, heightRect;
 //
 void setup() {
-  //Declaring Display Geometry: landscape, square, potrait
-  size(700, 400); //Able to deploy with efullscreen();      
+  size(600, 400);
   appWidth = width;
   appHeight = height;
-  //
-  //Concatenation , -or- +
+
   println("\t\t\tWidth="+width, "\tHeight="+height);
   println("Display Monitor:", "\twidth:"+displayWidth, "height:"+displayHeight);
   //
-  String ls="landscapes or Square", p="potrait", DO="Display Orientation", instruct ="Breh, turn your phon";
+  String ls="landscapes or Square", p="Potrait", DO="Display Orientation is:", instruct ="Breh, turn your phon";
   //
-  if ( appWidth >= appHeight ) { //Declaring Landscape & Square 
-    println(instruct);
-  } else {
+  if ( appWidth >= appHeight && appWidth < displayWidth) { //Declaring Landscape & Square 
     println("Display: Good to Go");
-    if ( appWidth > displayWidth ) { //Fitting CANVAS into Monitor display} else {
+    println(DO, ls);
+    smallerDimension= appHeight;
+    largerDimension= appWidth;
+    //
+    println("Smaller Dimension is:", smallerDimension, "Larger Dimension is:", largerDimension);
+  } else {
+    if (appWidth < displayWidth) {
+      println(DO, p);
+      println(instruct);
+    }
+  }
+  //
+  if ( appWidth > displayWidth ) {
     appWidth=0;
     appHeight=0;
     println("STOP, is broken");
-    } else {
-      //Empty ELSE
-    }
-  } 
+  } else {
+  }
   //Population
   centerX = width * 1/2;
   centerY = height *1/2;
